@@ -1,0 +1,37 @@
+body{
+    margin: 0;
+    min-height: 100vh;
+    background-image: url(imgs/vhs-distortion.gif);
+    position: sticky;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.titulo{
+    font-family:"Press Start 2P";
+    color: rgba(209, 206, 206, 0.7);
+    margin: 50px;
+}
+
+.info {
+    font-family: "VT323";
+    margin: 50px;
+    color: white;
+    font-size: 30px;
+}
+
+.header {
+    display: flex;
+    margin-top: 50px;
+}
+
+#perfil {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-left: auto;
+    margin-right: 50px;
+    
+}
