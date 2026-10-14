@@ -1,37 +1,132 @@
-body{
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+html {
+    scroll-behavior: smooth;
+    font-family: system-ui, -apple-system, sans-serif;
+   }
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: rgb(37, 28, 110);
+    color: rgb(249, 243, 243);
+}
+
+
+
+.hero {
+    width: 100%;
     min-height: 100vh;
-    background-image: url(imgs/vhs-distortion.gif);
-    position: sticky;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-}
-
-.titulo{
-    font-family:"Press Start 2P";
-    color: rgba(209, 206, 206, 0.7);
-    margin: 50px;
-}
-
-.info {
-    font-family: "VT323";
-    margin: 50px;
-    color: white;
-    font-size: 30px;
-}
-
-.header {
     display: flex;
-    margin-top: 50px;
+    padding: 0 5%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    animation: transicao 2.5s ease-in-out infinite alternate;
+
+}
+
+@keyframes transicao {
+    0% {
+        background-color: rgb(25, 19, 70);
+    }
+    
+    100% {
+        background-color: rgb(9, 4, 53);
+    }
+}
+.infos{
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.infos p{
+    color: lightgray;
 }
 
 #perfil {
+    max-width: 200px;
+    display: inline;
+    border-radius: 200px;
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: inherit;
+    opacity: 0.6;
+    font-size: 1.25rem;
+    letter-spacing: 0.05em;
+    transition: opacity 0.2s ease;
+}
+
+.scroll-down:hover {
+    opacity: 1;
+}
+
+.seta {
+    font-size: 1.8rem;
+    animation: flutuar 1.5s ease-in-out infinite;
+}
+
+@keyframes flutuar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(6px);
+    }
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
     width: 100%;
-    max-width: 300px;
-    height: auto;
-    margin-left: auto;
-    margin-right: 50px;
+    height: 150px; /* Altura do gradiente (aumente para uma transição mais suave) */
     
+    /* Vai de totalmente transparente até a cor exata do seu main */
+    background: linear-gradient(to bottom, transparent, rgb(37, 28, 110));
+    
+    /* Garante que cliques ou a setinha não sejam bloqueados pela camada invisível */
+    pointer-events: none;
+}
+
+.section-titles{
+    color: rgb(0, 0, 0);
+    margin: 15px;
+}
+
+.cards-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.cards{
+    background-color: rgb(37, 28, 110);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, border-color 0.2s ease;
 }
