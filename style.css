@@ -25,7 +25,32 @@ body {
     color: rgb(249, 243, 243);
 }
 
+@media (max-width: 768px) {
+    .media-projetos{
+        display: flex;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+    .media-projetos .card{
+        width: 100% !important;
+        max-width: 350px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin-top: 10px !important;
+        margin-bottom: 10px !important;
+        float: none !important;
+    }
 
+    .media-skills{
+        align-items: center !important;
+        justify-content: space-evenly !important;
+        text-align: center !important;
+    }
+}
 
 .hero {
     width: 100%;
@@ -155,7 +180,7 @@ body {
 }
 
 .title-skills{
-    margin: 20px;
+    margin: 20px !important;
     font-family: "Archivo Black", sans-serif;
     font-size: 30px;
 }
@@ -169,6 +194,9 @@ body {
 .skills li{
     font-family: monospace;
     margin: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .archivo-black-regular {
@@ -180,4 +208,5 @@ body {
 .skill-icon{
     max-width: 20px;
     margin: 5px;
+    display: flex;
 }
